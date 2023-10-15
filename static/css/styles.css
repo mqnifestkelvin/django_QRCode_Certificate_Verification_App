@@ -1,0 +1,315 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.form-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    border-radius: 25px;
+    width: 500px;
+    margin: 5% auto;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-layout-qr-scan {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    border-radius: 25px;
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px 20px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 10;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-button {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-image: linear-gradient(90deg, #007bff, #0056b3);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    transition: all 0.3s ease;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-primary-one {
+    background-image: linear-gradient(90deg, #007bff, #0056b3);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    transition: all 0.3s ease;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-primary-two {
+    background-image: radial-gradient(circle at 10% 20%, rgb(0, 93, 133) 0%, rgb(0, 181, 149) 90%);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    transition: all 0.3s ease;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-primary-three {
+    background-image: linear-gradient(89.1deg, rgb(251, 0, 83) 15.2%, rgb(179, 146, 231) 98.5%);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    transition: all 0.3s ease;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-image: linear-gradient(90deg, #0056b3, #003c8a);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    gap: 20px;
+    min-height: 100vh;
+}
+
+#reader {
+    width: 300px;
+    height: 227px;
+    border: 3px solid #000; 
+}
+
+#result {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 150px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#startBtn {
+    background-color: green;
+}
+
+#stopBtn {
+    background-color: red;
+}
+
+#scanFileBtn {
+    background-color: blue;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: darkgray;
+}
+
+#startBtn:hover {
+    background-color: darkgreen;
+}
+
+#stopBtn:hover {
+    background-color: darkred;
+}
+
+#scanFileBtn:hover {
+    background-color: darkblue;
+}
+
+.btn-stop {
+    background-image: linear-gradient(90deg, #ff0000, #cc0000); /* Change colors as needed for the gradient */
+}
+
+.btn-stop:hover {
+    background-image: linear-gradient(90deg, #cc0000, #aa0000); /* Change colors as needed for the gradient */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-stop:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* EXIST.html */
+body {
+    background-color: #f9f9fa;
+}
+
+.padding {
+    padding: 3rem !important;
+}
+
+.user-card-full {
+    overflow: hidden;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+    border: none;
+    margin-bottom: 30px;
+}
+
+.m-r-0 {
+    margin-right: 0px;
+}
+
+.m-l-0 {
+    margin-left: 0px;
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px;
+}
+
+.bg-c-lite-green {
+    background: linear-gradient(to right, #ee5a6f, #f29263);
+}
+
+.user-profile {
+    padding: 20px 0;
+}
+
+.card-block {
+    padding: 1.25rem;
+}
+
+.m-b-25, .m-b-20, .m-b-10 {
+    margin-bottom: 25px; /* Adjust values accordingly */
+}
+
+.img-radius {
+    border-radius: 5px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+.card .card-block p {
+    line-height: 25px;
+}
+
+@media only screen and (min-width: 1400px){
+    p {
+        font-size: 14px;
+    }
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.text-muted {
+    color: #919aa3 !important;
+}
+
+.f-w-600 {
+    font-weight: 600;
+}
+
+.m-t-40 {
+    margin-top: 20px; /* Adjust this value if needed */
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important;
+}
+
+.user-card-full .social-link li {
+    display: inline-block;
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-icon-hover:hover {
+    transform: scale(1.2); /* Enlarges the icon to 120% of its original size on hover */
+    color: #ffffff;       /* Change color to white on hover */
+    transition: all 0.3s; /* Makes the hover effect smooth */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+}
+
+  
+footer {
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.my-5 {
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+label {
+    font-weight: bold;
+    font: courier;
+}
