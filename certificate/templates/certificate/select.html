@@ -1,0 +1,35 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+
+<body>
+<style>
+    h3 {
+        font-weight: bold;
+    }
+</style>
+
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <h3>Select Verification Method</h3>
+        
+        <form action="{% url 'select' %}" method="post">
+            {% csrf_token %}
+            <hr>
+            <label for="hashcode">
+                <input type="radio" name="verificationMethod" value="hashcode" id="hashcode" required>
+                Verify using Hash Code
+            </label><br>
+    
+            <label for="qrcode">
+                <input type="radio" name="verificationMethod" value="qrcode" id="qrcode">
+                Verify using QR Code
+            </label><br><br>
+    
+            <button type="submit" class="btn btn-primary text-white ">
+                Verify Certificate 
+            </button>
+        </form>
+    </div>
+
+    </body>
+{% endblock %}

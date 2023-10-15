@@ -1,0 +1,105 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+    .reader {
+        width: 300px;
+        height: 200px;
+        border-radius: 0px;
+        border: 2px solid #000;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+    }
+
+    div {
+        margin-top: 10px;
+    }
+
+
+</style>
+
+
+<!-- Load the QR code library -->
+<script src="{% static 'node_modules/html5-qrcode/html5-qrcode.min.js' %}"></script>
+
+<!-- The div where the scanner will display -->
+
+
+
+<div class="container bg-white p-9 form-layout-qr-scan text-center">
+    <div id="reader" class="reader"></div>
+
+    <br>
+    <!-- Button for live camera scanning -->
+    <button class="btn btn-primary-one mb-2" onclick="startLiveScanner()">Start Live Scanning</button>
+    <br>
+
+    <!-- Input and button for image scanning -->
+    <input type="file" id="imageInput" accept="image/*" style="display:none">
+    <button class="btn btn-primary-two mb-2" onclick="document.getElementById('imageInput').click()">Scan from Image</button>
+    <br>
+
+    <!-- Button for stopping live camera scanning -->
+    <button class="btn btn-primary-three" onclick="stopLiveScanner()">Stop Live Scanning</button>
+</div>
+
+<script>
+    function onScanSuccess(decodedText, decodedResult) {
+        console.log(`Code matched = ${decodedText}`, decodedResult);
+        
+        let prefix = 'http://127.0.0.1:8000/existqr/';
+        if (decodedText.startsWith(prefix)) {
+            let slug = decodedText.slice(prefix.length).replace(/\//g, '');
+            window.location.href = `/existqr/${slug}/`;
+        }
+    }
+
+    function onScanFailure(error) {
+        console.warn(`Code scan error = ${error}`);
+    }
+
+    // Function to start live scanning using camera
+    let html5QrCodeInstance; // To store the instance of the Html5Qrcode class
+
+    function startLiveScanner() {
+        Html5Qrcode.getCameras().then(devices => {
+            if (devices && devices.length) {
+                const cameraId = devices[0].id; // using the first camera
+                html5QrCodeInstance = new Html5Qrcode("reader");
+                html5QrCodeInstance.start(cameraId, { fps: 10, qrbox: 300 }, onScanSuccess, onScanFailure)
+                .catch(err => {
+                    alert("Error starting the camera: " + err);
+                });
+            } else {
+                alert("No camera found on this device.");
+            }
+        }).catch(error => {
+            alert("Error accessing camera: " + error);
+        });
+    }
+
+    function stopLiveScanner() {
+        if (html5QrCodeInstance) {
+            html5QrCodeInstance.stop()
+            .then(_ => {
+                console.log("QR Code scanning stopped.");
+            }).catch(err => {
+                alert("Error stopping the scanner: " + err);
+            });
+        }
+    }
+
+    // Function to scan from an uploaded image
+    document.getElementById('imageInput').addEventListener('change', function() {
+        const fileInput = this;
+        if (fileInput.files && fileInput.files.length) {
+            const imageFile = fileInput.files[0];
+            new Html5Qrcode("reader").scanFile(imageFile, true)
+            .then(onScanSuccess)
+            .catch(onScanFailure);
+        }
+    });
+</script>
+
+{% endblock %}
