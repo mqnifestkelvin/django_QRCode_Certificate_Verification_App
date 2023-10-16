@@ -213,7 +213,7 @@ body {
 }
 
 .bg-c-lite-green {
-    background: linear-gradient(to right, #ee5a6f, #f29263);
+    background: linear-gradient(109.6deg, rgb(0, 37, 84) 11.2%, rgba(0, 37, 84, 0.32) 100.2%);
 }
 
 .user-profile {
@@ -232,6 +232,10 @@ body {
     border-radius: 5px;
 }
 
+.exist-length {
+    height: 200px;
+}
+
 h6 {
     font-size: 14px;
 }
@@ -239,6 +243,23 @@ h6 {
 .card .card-block p {
     line-height: 25px;
 }
+
+.page-content {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh;            
+    margin-top: 100px;
+}
+
+.img-radius {
+    width: 150px;           
+    height: 150px;          
+    border-radius: 50%;     
+    object-fit: cover;      
+}
+
+
 
 @media only screen and (min-width: 1400px){
     p {

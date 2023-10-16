@@ -163,5 +163,5 @@ def store_harshcode(request):
 
 
 def test(request):
-    return render(request, 'certifications/test.html')
+    return render(request, 'certificate/test.html')
 

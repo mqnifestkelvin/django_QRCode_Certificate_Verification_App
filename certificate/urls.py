@@ -15,3 +15,5 @@ urlpatterns = [
     path('existqr/<str:hashcode>/', views.qr_scan_redirect, name='qr-scan-redirect'),
 
 ]
+
+
