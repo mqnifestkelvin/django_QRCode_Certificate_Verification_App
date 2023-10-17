@@ -12,10 +12,12 @@ git clone https://github.com/mqnifestkelvin/django_QRCode_Certificate_Verificati
    
    * For Linux all you need to do is run the codes below and you are all set:
     
-```sudo apt-get update
+```
+sudo apt-get update
 ```
 
-```apt-get install git
+```
+apt-get install git
 ```
 
 ## Creating Over Virtual Environment
