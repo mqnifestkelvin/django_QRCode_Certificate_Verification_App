@@ -9,11 +9,11 @@ To get started with using and testing the project on our local machine, we have 
    * For windows, click [here](#https://git-scm.com/download/win) to install and get started and start using git. Also for those who are new to using git here is a useful [video](#https://www.simplilearn.com/tutorials/git-tutorial/git-installation-on-windows) on how to get started using git for cloning on windows.
     * For Linux all you need to do is run the codes below and you are all set:
     
-    `sudo apt-get update
-    `
+`sudo apt-get update
+`
 
-    ```apt-get install git
-    ```
+`apt-get install git
+`
 
 ## Creating Over Virtual Environment
 This is very important as it helps isolate certain project dependencies from another preventing the overwriting of important dependencies necessary for the proper functioning of various other packages and application. Therefore, getting a virtual environment setup is necessary to get this project up and running as it suppose to. This can be done by copy pasting and running the codes below
