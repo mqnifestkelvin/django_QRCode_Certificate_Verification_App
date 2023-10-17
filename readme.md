@@ -7,7 +7,8 @@ To get started with using and testing the project on our local machine, we have 
 
 **Note, If you don't have git installed on your local machine follow the direction below according to the platform you currently make use of**
    * For windows, click [here](#https://git-scm.com/download/win) to install and get started and start using git. Also for those who are new to using git here is a useful [video](#https://www.simplilearn.com/tutorials/git-tutorial/git-installation-on-windows) on how to get started using git for cloning on windows.
-    * For Linux all you need to do is run the codes below and you are all set:
+   
+   * For Linux all you need to do is run the codes below and you are all set:
     
 `sudo apt-get update
 `
