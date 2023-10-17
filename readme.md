@@ -63,7 +63,7 @@ While doing this, this will prompt us to input our name email address and input 
 **Note***: This makes use of the computer's default name. Input your password and hit enter and you are all set.
 
 
-## Making migration 
+## Making Migration 
 Our model have already been setup, all we need to do is instanciate it to add structure all we need to do is instanciate it to add structure to our database. We can achieve this by running the following commands.
 
 ```
