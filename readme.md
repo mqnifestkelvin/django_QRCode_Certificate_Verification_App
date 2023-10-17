@@ -20,7 +20,7 @@ sudo apt-get update
 apt-get install git
 ```
 
-## Creating Over Virtual Environment
+## Creating Our Virtual Environment
 This is very important as it helps isolate certain project dependencies from another preventing the overwriting of important dependencies necessary for the proper functioning of various other packages and application. Therefore, getting a virtual environment setup is necessary to get this project up and running as it suppose to. This can be done by copy pasting and running the codes below
 
 ```
