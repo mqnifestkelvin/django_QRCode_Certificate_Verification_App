@@ -30,8 +30,25 @@ pip install virtualenv
 ```
 virualenv env
 ```
-
 **Note the keyword env could be any word at all, this just depends on you. Although the use of env is just a naming convention**
 
-## Installing Necessary Dependencies
+**Note, change directory into the location where the virtual environment was created then run the code below:***
 
+### For Windows
+```
+env\Scripts\activate
+```
+
+### For Linux
+```
+source env/bin/activate
+```
+
+## Installing Necessary Dependencies
+For the application to function as intended, it is important the required dependencies are installed onto the virtual environment we created earlier. To do this we can simple run the code below:
+
+```
+pip install -r requirements.txt
+```
+
+## Running a Local Instance of the Application 
