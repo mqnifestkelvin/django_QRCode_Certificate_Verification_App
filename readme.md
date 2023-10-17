@@ -21,7 +21,7 @@ apt-get install git
 ```
 
 ## Creating Our Virtual Environment
-This is very important as it helps isolate certain project dependencies from another preventing the overwriting of important dependencies necessary for the proper functioning of various other packages and application. Therefore, getting a virtual environment setup is necessary to get this project up and running as it suppose to. This can be done by copy pasting and running the codes below
+This is very important as it helps isolate certain project dependencies from another preventing the overwriting of important dependencies necessary for the proper functioning of various other packages and application. Therefore, getting a virtual environment setup is necessary to get this project up and running as it suppose to. This can be done by copy pasting and running the command below:
 
 ```
 pip install virtualenv
@@ -52,7 +52,7 @@ pip install -r requirements.txt
 ```
 
 ## Creating a Superuser
-This is import for managing the local database the project depends on. For the sake of simplicity and for the sake of the project we will be making use of sqlite. We can create a superuser account by running the command
+This is import for managing the local database the project depends on. For the sake of simplicity and for the sake of the project we will be making use of sqlite. We can create a superuser account by running the command:
 
 ```
 python manage.py createsuperuser
@@ -61,6 +61,7 @@ python manage.py createsuperuser
 While doing this, this will prompt us to input our name email address and input suitable passwords. You can skip inputing a user name if you prefer to make use of the default name.
 
 **Note***: This makes use of the computer's default name. Input your password and hit enter and you are all set.
+
 
 ## Making migration 
 Our model have already been setup, all we need to do is instanciate it to add structure all we need to do is instanciate it to add structure to our database. We can achieve this by running the following commands.
@@ -73,4 +74,25 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-## Running a Local Instance of the Application 
+## Running a Local Instance of the Application
+If everything has been properly setup this should spawn a web instance of the certificate verification web application. To get this up and running we need to run the command:
+
+```
+python manage.py runserver
+```
+This will authomaticall create a server at 
+
+```
+http://127.0.0.1:8000/
+```
+
+**Note**: If a brower instance is not automatically started, we can easily copy paste the IP address above to view the running instance.
+After we have successfully creaated the server, we can proceed to creating our certificate from the backend by pasting the address into our browser:
+
+```
+http://127.0.0.1:8000/admin
+```
+
+After this is done, navigate towards adding a new certificate and save. 
+**Note**: Do not fill in the last three three columns these fields auto generate with unique values which are used to autogen the user unique QR codes:
+`slug`, `Encrypted byte code` and `Encrypted byte code redirect link`.  
