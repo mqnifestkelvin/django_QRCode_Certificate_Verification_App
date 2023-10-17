@@ -30,9 +30,9 @@ pip install virtualenv
 ```
 virualenv env
 ```
-**Note the keyword env could be any word at all, this just depends on you. Although the use of env is just a naming convention**
+**Note**: The keyword env could be any word at all, this just depends on you. Although the use of env is just a naming convention
 
-**Note, change directory into the location where the virtual environment was created then run the code below:***
+**Note**: Change directory into the location where the virtual environment was created then run the code below:
 
 ### For Windows
 ```
@@ -49,6 +49,28 @@ For the application to function as intended, it is important the required depend
 
 ```
 pip install -r requirements.txt
+```
+
+## Creating a Superuser
+This is import for managing the local database the project depends on. For the sake of simplicity and for the sake of the project we will be making use of sqlite. We can create a superuser account by running the command
+
+```
+python manage.py createsuperuser
+```
+
+While doing this, this will prompt us to input our name email address and input suitable passwords. You can skip inputing a user name if you prefer to make use of the default name.
+
+**Note***: This makes use of the computer's default name. Input your password and hit enter and you are all set.
+
+## Making migration 
+Our model have already been setup, all we need to do is instanciate it to add structure all we need to do is instanciate it to add structure to our database. We can achieve this by running the following commands.
+
+```
+python manage.py makemigrations
+```
+
+```
+python manage.py migrate
 ```
 
 ## Running a Local Instance of the Application 
