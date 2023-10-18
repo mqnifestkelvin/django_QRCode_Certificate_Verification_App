@@ -60,7 +60,7 @@ python manage.py createsuperuser
 
 While doing this, this will prompt us to input our name email address and input suitable passwords. You can skip inputing a user name if you prefer to make use of the default name.
 
-**Note***: This makes use of the computer's default name. Input your password and hit enter and you are all set.
+**Note**: This makes use of the computer's default name. Input your password and hit enter and you are all set.
 
 
 ## Making Migration 
